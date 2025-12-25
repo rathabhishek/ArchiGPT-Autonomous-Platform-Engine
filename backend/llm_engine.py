@@ -7,7 +7,7 @@ def generate_iac(user_prompt: str):
     """
     client = boto3.client("bedrock-runtime", region_name="us-east-1")
     
-    system_prompt = "You are a senior Platform Engineer. Convert user requests into valid Terraform code. Only output the code, no prose."
+    system_prompt = "Convert user requests into valid Terraform code. Only output the code, no prose."
     
     body = json.dumps({
         "anthropic_version": "bedrock-2023-05-31",
